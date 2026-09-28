@@ -4,12 +4,13 @@ on:
   workflow_dispatch:
     inputs:
       doi:
-        description: "Dataverse DOI (e.g. doi:10.7910/DVN/XXXXXX)"
+        description: "Dataverse DOI"
         required: true
+        default: "doi:10.7910/DVN/1D6ZDU"
       list_only:
-        description: "Only list the files and their sizes (downloads and commits nothing)"
+        description: "Preview only: list files, sizes and counts (downloads and commits nothing)"
         type: boolean
-        default: false
+        default: true
 
 permissions:
   contents: write
@@ -27,9 +28,11 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: List dataset files
+      - name: Preview dataset files
         if: ${{ inputs.list_only }}
-        run: python scripts/migrate_from_dataverse.py "$DOI" --list
+        run: |
+          python scripts/migrate_from_dataverse.py "$DOI" --list | tee "$RUNNER_TEMP/preview.txt"
+          { echo '```'; cat "$RUNNER_TEMP/preview.txt"; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Download dataset and generate citation files
         if: ${{ !inputs.list_only }}

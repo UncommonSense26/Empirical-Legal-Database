@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it using the metadata below."
+type: dataset
+title: "Empirical Legal Database"
+authors:
+  - name: "Empirical Legal Database contributors"
+doi: 10.7910/DVN/1D6ZDU
+url: "https://github.com/UncommonSense26/Empirical-Legal-Database"
+repository: "https://github.com/UncommonSense26/Empirical-Legal-Database"
+identifiers:
+  - type: doi
+    value: 10.7910/DVN/1D6ZDU
+    description: "Harvard Dataverse DOI (permanent; the dataset is now maintained on GitHub)"
+  - type: url
+    value: "https://github.com/UncommonSense26/Empirical-Legal-Database"
+    description: "Primary source: GitHub repository"
+abstract: "Empirical legal research dataset, originally published on Harvard Dataverse and now maintained on GitHub. This citation metadata is a placeholder until the import workflow replaces it with the full Dataverse record."

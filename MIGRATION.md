@@ -3,7 +3,7 @@
 ## What can and can't be done with a DOI
 
 A DOI can't be transferred to GitHub. Harvard Dataverse registered your DOI
-(`10.7910/DVN/...`) through DataCite under Harvard's prefix, and only Harvard
+(`10.7910/DVN/1D6ZDU`) through DataCite under Harvard's prefix, and only Harvard
 Dataverse can change where it points. GitHub doesn't issue DOIs.
 
 Dataverse DOIs are permanent, so the old DOI will keep working. The standard
@@ -24,35 +24,35 @@ the original DOI.
 
 ## Step 1: Import the dataset (no local setup needed)
 
-1. Push this branch and merge it into your default branch.
+1. Merge this branch into `main`.
 2. On GitHub, go to **Actions → "Migrate from Harvard Dataverse" → Run workflow**.
-3. Enter your DOI, e.g. `doi:10.7910/DVN/ABC123`, and run it.
-4. The workflow downloads every file (in its original upload format, not the
-   `.tab` conversion Dataverse makes), saves the metadata, generates
-   `CITATION.cff` and `.zenodo.json`, and commits them.
+   The DOI field is already set to `doi:10.7910/DVN/1D6ZDU`.
+3. **Preview first.** Leave **"Preview only"** ticked (the default) and run it.
+   The run's summary page shows every file, its size, and how many files go
+   to each destination. Nothing is downloaded or committed.
+4. **Import.** Run it again with **"Preview only"** unticked. The workflow:
+   - commits files under 100 MB to `data/`, fetching the original upload
+     format rather than the `.tab` conversion Dataverse makes;
+   - uploads files from 100 MB to 2 GB to a release named `dataverse-large-files`;
+   - lists files over 2 GB in `metadata/SKIPPED_LARGE_FILES.txt` without
+     downloading them;
+   - saves `metadata/dataverse_metadata.json` and `metadata/file_manifest.json`,
+     checking every download against Dataverse's checksum;
+   - replaces the placeholder `CITATION.cff` and `.zenodo.json` with the real
+     title, authors, keywords, license, and abstract.
 
-If any files are restricted, first add a Dataverse API token as a repository
+If any file fails to download, the run stops without committing anything,
+so a partial import is never committed. The most likely cause is a
+restricted file. In that case, add a Dataverse API token as a repository
 secret named `DATAVERSE_API_TOKEN` (Settings → Secrets and variables →
-Actions). You can create a token in Dataverse under your name → API Token.
-
-To see the file list and sizes first, run the workflow with **"Only list the
-files"** ticked. It prints each file's size and downloads nothing.
-
-### Files over 100 MB
-
-You don't need to check file sizes before running the import. GitHub refuses
-to store files over 100 MB in the repository itself, so the workflow uploads
-those files (up to 2 GB each) to a GitHub release named
-`dataverse-large-files`. `metadata/LARGE_FILES_IN_RELEASE.txt` records each
-file's original folder path. Any file over 2 GB is skipped and listed in
-`metadata/SKIPPED_LARGE_FILES.txt`. For those files, either leave them on
-Dataverse (the DOI still points there) or set up Git LFS.
+Actions) and run the workflow again. You can create a token in Dataverse
+under your name → API Token.
 
 To run it locally instead:
 
 ```
-python3 scripts/migrate_from_dataverse.py doi:10.7910/DVN/ABC123 --list
-python3 scripts/migrate_from_dataverse.py doi:10.7910/DVN/ABC123 --large-dir large_files
+python3 scripts/migrate_from_dataverse.py --list
+python3 scripts/migrate_from_dataverse.py --large-dir large_files
 ```
 
 ## Step 2: Mint a DOI for the GitHub version with Zenodo (optional)
@@ -71,11 +71,12 @@ python3 scripts/migrate_from_dataverse.py doi:10.7910/DVN/ABC123 --large-dir lar
 5. Add the Zenodo **concept DOI**, which always resolves to the latest
    version, to `README.md` and as a second identifier in `CITATION.cff`.
 
-## Step 3: Update the Dataverse record
+## Step 3: Point the Dataverse record to GitHub
 
-In Dataverse, edit the dataset's metadata:
+The DOI always resolves to the Dataverse landing page. That page is where
+you redirect people to GitHub. In Dataverse, edit the dataset's metadata:
 
-- Add a note to the description, e.g. "This dataset is now maintained at
+- Put a note at the top of the description, e.g. "This dataset is now maintained at
   https://github.com/UncommonSense26/Empirical-Legal-Database (Zenodo DOI:
   10.5281/zenodo.XXXXXXX)."
 - Under **Related Material** / **Related Datasets**, add the GitHub URL and
