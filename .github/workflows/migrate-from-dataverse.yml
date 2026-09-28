@@ -6,6 +6,10 @@ on:
       doi:
         description: "Dataverse DOI (e.g. doi:10.7910/DVN/XXXXXX)"
         required: true
+      list_only:
+        description: "Only list the files and their sizes (downloads and commits nothing)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -13,19 +17,40 @@ permissions:
 jobs:
   migrate:
     runs-on: ubuntu-latest
+    env:
+      DOI: ${{ inputs.doi }}
+      DATAVERSE_API_TOKEN: ${{ secrets.DATAVERSE_API_TOKEN }}
+      GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
+      - name: List dataset files
+        if: ${{ inputs.list_only }}
+        run: python scripts/migrate_from_dataverse.py "$DOI" --list
+
       - name: Download dataset and generate citation files
-        env:
-          DATAVERSE_API_TOKEN: ${{ secrets.DATAVERSE_API_TOKEN }}
-        run: python scripts/migrate_from_dataverse.py "${{ inputs.doi }}"
+        if: ${{ !inputs.list_only }}
+        run: python scripts/migrate_from_dataverse.py "$DOI" --large-dir "$RUNNER_TEMP/large_files"
+
       - name: Commit results
+        if: ${{ !inputs.list_only }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A .
-          git commit -m "Import dataset ${{ inputs.doi }} from Harvard Dataverse" || echo "Nothing to commit"
+          git commit -m "Import dataset $DOI from Harvard Dataverse" || echo "Nothing to commit"
           git push
+
+      # Files over 100 MB can't be committed, so they go on a GitHub release instead.
+      - name: Attach files over 100 MB to a release
+        if: ${{ !inputs.list_only && hashFiles('metadata/LARGE_FILES_IN_RELEASE.txt') != '' }}
+        run: |
+          TAG=dataverse-large-files
+          gh release view "$TAG" >/dev/null 2>&1 || \
+            gh release create "$TAG" --target "$(git rev-parse HEAD)" --prerelease \
+              --title "Large data files imported from Harvard Dataverse" \
+              --notes "Files over 100 MB from $DOI. Original paths are listed in metadata/LARGE_FILES_IN_RELEASE.txt."
+          gh release upload "$TAG" "$RUNNER_TEMP"/large_files/* --clobber

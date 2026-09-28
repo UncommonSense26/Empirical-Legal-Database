@@ -9,6 +9,8 @@ a GitHub release is linked back to the original Dataverse DOI.
 Usage:
     python scripts/migrate_from_dataverse.py doi:10.7910/DVN/XXXXXX
     python scripts/migrate_from_dataverse.py 10.7910/DVN/XXXXXX --api-token TOKEN  # restricted files
+    python scripts/migrate_from_dataverse.py doi:10.7910/DVN/XXXXXX --list        # show files and sizes only
+    python scripts/migrate_from_dataverse.py doi:... --large-dir large_files      # keep >100 MB files aside
 
 Standard library only (Python 3.8+).
 """
@@ -22,6 +24,7 @@ import urllib.request
 
 SERVER = "https://dataverse.harvard.edu"
 GITHUB_FILE_LIMIT = 100 * 1024 * 1024  # GitHub rejects files > 100 MB without LFS
+RELEASE_ASSET_LIMIT = 2 * 1024 * 1024 * 1024  # GitHub release assets max out at 2 GB
 
 
 def get_json(url, token=None):
@@ -68,6 +71,9 @@ def main():
     ap.add_argument("--server", default=SERVER)
     ap.add_argument("--api-token", default=os.environ.get("DATAVERSE_API_TOKEN"))
     ap.add_argument("--out", default="data", help="directory for the data files")
+    ap.add_argument("--large-dir", help="download files over 100 MB here (for a GitHub release) "
+                                        "instead of skipping them")
+    ap.add_argument("--list", action="store_true", help="print files and sizes, download nothing")
     args = ap.parse_args()
 
     doi = args.doi.strip()
@@ -80,11 +86,25 @@ def main():
     meta = get_json(f"{args.server}/api/datasets/:persistentId/?persistentId={pid}", args.api_token)["data"]
     version = meta["latestVersion"]
 
+    if args.list:
+        files = version.get("files", [])
+        total = 0
+        for entry in files:
+            df = entry["dataFile"]
+            name = df.get("originalFileName") or df["filename"]
+            size = df.get("originalFileSize") or df.get("filesize") or 0
+            total += size
+            flag = " (over 100 MB)" if size > GITHUB_FILE_LIMIT else ""
+            print(f"{size / 1e6:10.1f} MB  {os.path.join(entry.get('directoryLabel') or '', name)}{flag}")
+        print(f"{total / 1e6:10.1f} MB  total, {len(files)} files")
+        return 0
+
     os.makedirs("metadata", exist_ok=True)
     with open("metadata/dataverse_metadata.json", "w", encoding="utf-8") as f:
         json.dump(meta, f, indent=2, ensure_ascii=False)
 
     skipped = []
+    large = []
     for entry in version.get("files", []):
         df = entry["dataFile"]
         name = df.get("originalFileName") or df["filename"]
@@ -92,9 +112,14 @@ def main():
         dest = os.path.join(args.out, rel)
         size = df.get("originalFileSize") or df.get("filesize") or 0
         if size > GITHUB_FILE_LIMIT:
-            skipped.append((rel, size))
-            print(f"SKIP (>100 MB, use Git LFS): {rel}")
-            continue
+            if args.large_dir and size <= RELEASE_ASSET_LIMIT:
+                # release assets are flat, so encode the folder into the file name
+                dest = os.path.join(args.large_dir, rel.replace(os.sep, "__"))
+                large.append((rel, os.path.basename(dest), size))
+            else:
+                skipped.append((rel, size))
+                print(f"SKIP (too large for GitHub): {rel}")
+                continue
         # format=original returns the uploaded file rather than Dataverse's .tab conversion
         url = f"{args.server}/api/access/datafile/{df['id']}"
         if df.get("originalFileName"):
@@ -106,6 +131,12 @@ def main():
         with open("metadata/SKIPPED_LARGE_FILES.txt", "w") as f:
             for rel, size in skipped:
                 f.write(f"{rel}\t{size}\n")
+
+    if large:
+        with open("metadata/LARGE_FILES_IN_RELEASE.txt", "w") as f:
+            f.write("# original path\trelease asset name\tbytes\n")
+            for rel, asset, size in large:
+                f.write(f"{rel}\t{asset}\t{size}\n")
 
     cit = version["metadataBlocks"]["citation"]
     title = field(cit, "title") or "Empirical Legal Database"
@@ -168,8 +199,10 @@ def main():
         json.dump(zenodo, f, indent=2, ensure_ascii=False)
         f.write("\n")
 
-    print(f"\nDone. {len(version.get('files', [])) - len(skipped)} files in ./{args.out}, "
-          f"{len(skipped)} skipped. Wrote CITATION.cff, .zenodo.json, metadata/.")
+    n = len(version.get("files", []))
+    print(f"\nDone. {n - len(skipped) - len(large)} files in ./{args.out}, "
+          f"{len(large)} large files in ./{args.large_dir}, {len(skipped)} skipped. "
+          f"Wrote CITATION.cff, .zenodo.json, metadata/.")
     return 0
 
 

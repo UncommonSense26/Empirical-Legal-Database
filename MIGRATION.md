@@ -35,15 +35,25 @@ If any files are restricted, first add a Dataverse API token as a repository
 secret named `DATAVERSE_API_TOKEN` (Settings → Secrets and variables →
 Actions). You can create a token in Dataverse under your name → API Token.
 
+To see the file list and sizes first, run the workflow with **"Only list the
+files"** ticked. It prints each file's size and downloads nothing.
+
+### Files over 100 MB
+
+You don't need to check file sizes before running the import. GitHub refuses
+to store files over 100 MB in the repository itself, so the workflow uploads
+those files (up to 2 GB each) to a GitHub release named
+`dataverse-large-files`. `metadata/LARGE_FILES_IN_RELEASE.txt` records each
+file's original folder path. Any file over 2 GB is skipped and listed in
+`metadata/SKIPPED_LARGE_FILES.txt`. For those files, either leave them on
+Dataverse (the DOI still points there) or set up Git LFS.
+
 To run it locally instead:
 
 ```
-python3 scripts/migrate_from_dataverse.py doi:10.7910/DVN/ABC123
+python3 scripts/migrate_from_dataverse.py doi:10.7910/DVN/ABC123 --list
+python3 scripts/migrate_from_dataverse.py doi:10.7910/DVN/ABC123 --large-dir large_files
 ```
-
-Files over 100 MB are skipped, because GitHub rejects them without Git LFS.
-They are listed in `metadata/SKIPPED_LARGE_FILES.txt`. Add those with
-`git lfs track` or attach them to a GitHub Release.
 
 ## Step 2: Mint a DOI for the GitHub version with Zenodo (optional)
 
@@ -53,6 +63,11 @@ They are listed in `metadata/SKIPPED_LARGE_FILES.txt`. Add those with
 4. Zenodo archives the release and mints a DOI. It reads `.zenodo.json`, so
    the title, authors, license and the link to the Dataverse DOI are filled
    in automatically.
+   Zenodo makes a new archived version only when you publish a GitHub
+   Release, not on every push. Run the import **before** switching Zenodo on,
+   so the automatic `dataverse-large-files` release doesn't get its own DOI.
+   Zenodo archives only the repository contents, not files attached to a
+   release. Large files stay on the GitHub release and on Dataverse.
 5. Add the Zenodo **concept DOI**, which always resolves to the latest
    version, to `README.md` and as a second identifier in `CITATION.cff`.
 
