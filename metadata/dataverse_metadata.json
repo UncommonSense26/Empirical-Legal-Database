@@ -1,0 +1,1614 @@
+{
+  "id": 14144651,
+  "identifier": "DVN/1D6ZDU",
+  "persistentUrl": "https://doi.org/10.7910/DVN/1D6ZDU",
+  "protocol": "doi",
+  "authority": "10.7910",
+  "separator": "/",
+  "publisher": "Harvard Dataverse",
+  "publicationDate": "2026-08-16",
+  "storageIdentifier": "s3://10.7910/DVN/1D6ZDU",
+  "effectiveDatasetFileCountLimit": 1000,
+  "datasetFileUploadsAvailable": 947,
+  "datasetType": "dataset",
+  "locks": [],
+  "latestVersion": {
+    "id": 745162,
+    "datasetId": 14144651,
+    "datasetPersistentId": "doi:10.7910/DVN/1D6ZDU",
+    "datasetType": "dataset",
+    "storageIdentifier": "s3://10.7910/DVN/1D6ZDU",
+    "versionNumber": 4,
+    "internalVersionNumber": 12,
+    "versionMinorNumber": 0,
+    "versionState": "RELEASED",
+    "latestVersionPublishingState": "RELEASED",
+    "UNF": "UNF:6:wLx/Y+Q76FjHqQxllmizmg==",
+    "lastUpdateTime": "2026-08-16T13:36:28Z",
+    "releaseTime": "2026-08-16T13:36:28Z",
+    "createTime": "2026-08-16T12:54:01Z",
+    "publicationDate": "2026-08-16",
+    "citationDate": "2026-08-16",
+    "effectiveDatasetFileCountLimit": 1000,
+    "datasetFileUploadsAvailable": 947,
+    "license": {
+      "name": "CC0 1.0",
+      "uri": "http://creativecommons.org/publicdomain/zero/1.0",
+      "iconUri": "https://licensebuttons.net/p/zero/1.0/88x31.png",
+      "rightsIdentifier": "CC0-1.0",
+      "rightsIdentifierScheme": "SPDX",
+      "schemeUri": "https://spdx.org/licenses/",
+      "languageCode": "en"
+    },
+    "fileAccessRequest": true,
+    "metadataBlocks": {
+      "citation": {
+        "displayName": "Citation Metadata",
+        "name": "citation",
+        "fields": [
+          {
+            "typeName": "title",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "Florida Jury Management Indices Panel, 2008 Q4 through 2025 Q4: Edition-Sourced County-Quarter Archive"
+          },
+          {
+            "typeName": "author",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "authorName": {
+                  "typeName": "authorName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Lamoureux, Justin"
+                },
+                "authorAffiliation": {
+                  "typeName": "authorAffiliation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Independent Researcher"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "datasetContact",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "datasetContactName": {
+                  "typeName": "datasetContactName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Lamoureux, Justin"
+                },
+                "datasetContactAffiliation": {
+                  "typeName": "datasetContactAffiliation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Independent Researcher"
+                },
+                "datasetContactEmail": {
+                  "typeName": "datasetContactEmail",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "uncomonsense@yahoo.com"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "dsDescription",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "dsDescriptionValue": {
+                  "typeName": "dsDescriptionValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "A county-quarter panel of Florida jury management indices assembled from twenty-four published editions of the Florida Office of the State Courts Administrator quarterly Jury Management Indices Reports. The panel holds 4,422 county-quarter records covering all 67 counties and 66 recovered quarters, with six indices per record: Summoning Yield, Juror Days Per Trial, People Brought In Per Trial, Percent to Voir Dire, Average Panel Size, and Number of Trials. The deposit includes the source PDFs, the long-format extraction of every value published in every edition, the extraction and panel-construction code, the estimation code and output, and a data dictionary. Tabular files are served in Dataverse's archival tab-delimited format; the original CSV files are available through the original file format download option, and the checksums in SHA256SUMS correspond to those originals.\n\nEach county-quarter-index cell takes the value from the earliest edition that publishes it, a first-publication vintage rule, with two exceptions. First, the edition for the quarter ending December 2024 is excluded as a source for every quarter because it republishes the prior year's values under 2024 labels: 729 of 804 comparable cells in its third and fourth columns are identical to the prior year, state medians included, and its first two columns reconcile to neither clean 2024 edition. Calendar 2024 is therefore sourced from the June 2024, September 2024, and March 2025 editions. Second, where a first-published value fails the internal identity (average panel size equals people brought in per trial times percent to voir dire) outside the envelope permitted by published rounding, and a later edition publishes a different value for the same county-quarter, the later value governs. That exception changed six cells, all Escambia County Average Panel Size, where OSCA prints 25.9 as a placeholder in its most recent quarter column and replaces it when the true figure arrives.\n\nEvery record carries a Data Status field, and users should read it before computing any average or estimating any model. 4,039 records are reported. 380 are reported_all_zero, quarters in which OSCA publishes zero for all six indices. Zero is a measurement only for Number of Trials. For the four per-trial and per-panel indices it is undefined rather than measured, because their denominators are trial counts. For Summoning Yield it is neither: the index divides jurors available on day one by jurors summoned for the term, and neither quantity requires a trial, as 201 records in this panel show by reporting a positive Summoning Yield alongside zero trials. A zero Summoning Yield in an all-zero record is therefore best read as a non-report rather than a measured response rate of zero. These quarters are not evenly distributed across the calendar, so including them biases quarterly comparisons as well as means. Two records are reported_partial_quarter, Baker and Hendry counties for 2012 Q3, which OSCA computed from two months rather than three. One record is not_submitted, Okaloosa County for 2025 Q4, with all six index fields empty.\n\nKnown limits. Three quarters are absent from every recovered edition: 2022 Q4, 2023 Q1, and 2023 Q2. Three editions covering 2011 through 2013 publish only three of the six charts, so Juror Days Per Trial, People Brought In Per Trial, and Percent to Voir Dire are absent for 603 records in those years. The internal identity is testable in 3,818 records and fails outside the rounding envelope in six, each of which reproduces its printed source page exactly and each of which is QA-flagged. Twenty-four county-quarter records for the seven Third Circuit counties and Monroe, covering 2023 Q3, 2023 Q4, and 2024 Q1, were re-extracted from the June 2024 and September 2024 editions after a column-alignment error was found in a working panel. OSCA states that these figures are self reported by the clerk of court or the circuit court administrator and that OSCA does not confirm their accuracy, validity, or reliability; this deposit reproduces the published figures and does not audit them."
+                },
+                "dsDescriptionDate": {
+                  "typeName": "dsDescriptionDate",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "2026-08-15"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "subject",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+              "Law",
+              "Social Sciences"
+            ]
+          },
+          {
+            "typeName": "keyword",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "jury administration"
+                }
+              },
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "jury trials"
+                }
+              },
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "voir dire"
+                }
+              },
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "summoning yield"
+                }
+              },
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "six-person jury"
+                }
+              },
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "fair cross-section"
+                }
+              },
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "court administration"
+                }
+              },
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "judicial statistics"
+                }
+              },
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Florida"
+                }
+              },
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "county-quarter panel"
+                }
+              },
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "administrative data"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "publication",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "publicationRelationType": {
+                  "typeName": "publicationRelationType",
+                  "multiple": false,
+                  "typeClass": "controlledVocabulary",
+                  "value": "IsSupplementTo"
+                },
+                "publicationCitation": {
+                  "typeName": "publicationCitation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Justin Lamoureux, The Moving Denominator: Trial Timing, Seasonal Communities, and the Unexamined Variable in Fair Cross-Section Doctrine (manuscript in preparation, 2026)."
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "notesText",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "Extraction is by a single Python pipeline (pdfplumber) against the published PDFs, with a second independent pipeline run as a check on the editions available to both; where both read the same PDF they agree on 1,596 of 1,596 overlapping observations at published precision. A second check uses an internal identity: average panel size should equal people brought in per trial times percent to voir dire. The identity is testable in 3,818 of the 4,422 records, the remainder falling in the 2011 through 2013 editions that publish only three of the six charts or in the non-submission. On this version of the panel it fails outside the envelope permitted by published rounding in six records, each of which was compared against the printed source page and reproduces it exactly, so the discrepancy is in the published source rather than in the extraction. Two are DeSoto County, 2019 Q4 and 2020 Q1, which print a positive average panel size beside zero people brought in per trial and zero percent to voir dire. Four are Escambia County.\n\nEscambia publishes 25.9 as its average panel size in the most recent quarter column of twelve consecutive editions from 2009 through 2017 while its other indices vary normally. In six of those twelve quarters a later edition publishes a different value, and those six are corrected here; the other six were never republished and remain as printed with a flag. The identity is testable in nine of the twelve affected quarters and not in the other three, and that split does not align with the corrected split: of the six corrected quarters four are testable and two are not, and of the six uncorrected quarters five are testable and one is not. Neither check alone delimits the pattern. The identity cannot reach the three quarters whose editions omit the other two quantities. It also does not flag Escambia for 2009 Q3, where the printed 25.9 sits beside people brought in per trial of 28.9 and percent to voir dire of 89.6, whose product is 25.894 and rounds to the printed value: a placeholder that happens to satisfy the identity. Cross-edition comparison is what establishes that 25.9 is a placeholder rather than a value.\n\nValues are reproduced exactly as published. Nothing is imputed, corrected by interpolation, or smoothed; the six corrections substitute one published value for another published value of the same cell. QA Flags are populated on 97 records and mark conditions warranting source review, including the identity failures, the twelve Escambia placeholder cells, the two partial quarters, and reported values above 100 percent. OSCA's template mislabels the Second Circuit page's Average Panel Size row as \"First Circuit\" in every edition inspected; this deposit holds county records only, so the defect does not enter the panel, but anyone extracting the circuit pages should expect it."
+          },
+          {
+            "typeName": "producer",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "producerName": {
+                  "typeName": "producerName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Lamoureux, Justin"
+                },
+                "producerAffiliation": {
+                  "typeName": "producerAffiliation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Independent Researcher"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "depositor",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "Lamoureux, Justin"
+          },
+          {
+            "typeName": "dateOfDeposit",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "2026-08-15"
+          },
+          {
+            "typeName": "timePeriodCovered",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "timePeriodCoveredStart": {
+                  "typeName": "timePeriodCoveredStart",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "2008-10-01"
+                },
+                "timePeriodCoveredEnd": {
+                  "typeName": "timePeriodCoveredEnd",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "2025-12-31"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "kindOfData",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "Aggregate administrative records, county-quarter panel"
+            ]
+          },
+          {
+            "typeName": "dataSources",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "Florida Office of the State Courts Administrator, quarterly Jury Management Indices Reports, twenty-four published editions covering quarters ending September 2009 through December 2025, retrieved as static PDF objects from flcourts.gov. Edition filenames and download URLs are recorded per record in the Source File field of the panel and in the long-format extraction."
+            ]
+          },
+          {
+            "typeName": "characteristicOfSources",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "Figures are self reported by the clerk of court for each county or by the circuit court administrator. OSCA prints on the first page of every edition that it does not confirm their accuracy, validity, or reliability. Consecutive editions overlap and restate prior quarters; this deposit resolves the overlap by a first-publication vintage rule and excludes the edition for the quarter ending December 2024 as a source because it republishes the prior year's values under 2024 labels."
+          }
+        ]
+      }
+    },
+    "files": [
+      {
+        "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+        "label": "20150817-Quarter-Ending-December-31-2014.pdf",
+        "restricted": false,
+        "directoryLabel": "source_editions",
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144756,
+          "persistentId": "",
+          "filename": "20150817-Quarter-Ending-December-31-2014.pdf",
+          "contentType": "application/pdf",
+          "friendlyType": "Adobe PDF",
+          "filesize": 860607,
+          "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a00980aec1-5cdd23cb7dbe",
+          "rootDataFileId": -1,
+          "md5": "1f8433e2c452b897c15c24d16f743822",
+          "checksum": {
+            "type": "MD5",
+            "value": "1f8433e2c452b897c15c24d16f743822"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "directoryLabel": "source_editions",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+        "label": "20160722-Quarter-Ending-December-31-2015.pdf",
+        "restricted": false,
+        "directoryLabel": "source_editions",
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144738,
+          "persistentId": "",
+          "filename": "20160722-Quarter-Ending-December-31-2015.pdf",
+          "contentType": "application/pdf",
+          "friendlyType": "Adobe PDF",
+          "filesize": 678178,
+          "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a00980ba6a-f631ddfa6c08",
+          "rootDataFileId": -1,
+          "md5": "a5ce95192e14113d503d5d65414fd7ce",
+          "checksum": {
+            "type": "MD5",
+            "value": "a5ce95192e14113d503d5d65414fd7ce"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "directoryLabel": "source_editions",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+        "label": "20170302-Quarter-Ending-December-31-2016.pdf",
+        "restricted": false,
+        "directoryLabel": "source_editions",
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144753,
+          "persistentId": "",
+          "filename": "20170302-Quarter-Ending-December-31-2016.pdf",
+          "contentType": "application/pdf",
+          "friendlyType": "Adobe PDF",
+          "filesize": 665896,
+          "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a00980abeb-f6b73ecef4a3",
+          "rootDataFileId": -1,
+          "md5": "d8945488dbc750bf354d722f315e3737",
+          "checksum": {
+            "type": "MD5",
+            "value": "d8945488dbc750bf354d722f315e3737"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "directoryLabel": "source_editions",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+        "label": "20180216-Quarter-Ending-December-31-2017.pdf",
+        "restricted": false,
+        "directoryLabel": "source_editions",
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144737,
+          "persistentId": "",
+          "filename": "20180216-Quarter-Ending-December-31-2017.pdf",
+          "contentType": "application/pdf",
+          "friendlyType": "Adobe PDF",
+          "filesize": 713825,
+          "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a00980af82-3a4847983b73",
+          "rootDataFileId": -1,
+          "md5": "97729a6d1cce066698f30e965baf8374",
+          "checksum": {
+            "type": "MD5",
+            "value": "97729a6d1cce066698f30e965baf8374"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "directoryLabel": "source_editions",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+        "label": "20190522-quarter-ending-dec-31-2018.pdf",
+        "restricted": false,
+        "directoryLabel": "source_editions",
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144739,
+          "persistentId": "",
+          "filename": "20190522-quarter-ending-dec-31-2018.pdf",
+          "contentType": "application/pdf",
+          "friendlyType": "Adobe PDF",
+          "filesize": 711143,
+          "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a00980bfa9-c7d4ed970832",
+          "rootDataFileId": -1,
+          "md5": "6a59f8632ce0c18d55e2729fa25d0776",
+          "checksum": {
+            "type": "MD5",
+            "value": "6a59f8632ce0c18d55e2729fa25d0776"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "directoryLabel": "source_editions",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+        "label": "20200223-quarter-ending-december-31-2020.pdf",
+        "restricted": false,
+        "directoryLabel": "source_editions",
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144752,
+          "persistentId": "",
+          "filename": "20200223-quarter-ending-december-31-2020.pdf",
+          "contentType": "application/pdf",
+          "friendlyType": "Adobe PDF",
+          "filesize": 807458,
+          "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a00980c7b0-1c5e62adf53f",
+          "rootDataFileId": -1,
+          "md5": "be248c7391eabcfdb76111f22bd3177d",
+          "checksum": {
+            "type": "MD5",
+            "value": "be248c7391eabcfdb76111f22bd3177d"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "directoryLabel": "source_editions",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+        "label": "20200601_20200327_Quarter_Ending_December_31_2019.pdf",
+        "restricted": false,
+        "directoryLabel": "source_editions",
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144750,
+          "persistentId": "",
+          "filename": "20200601_20200327_Quarter_Ending_December_31_2019.pdf",
+          "contentType": "application/pdf",
+          "friendlyType": "Adobe PDF",
+          "filesize": 671957,
+          "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a00980acb1-696dfb0f3e92",
+          "rootDataFileId": -1,
+          "md5": "9f1f882bbeae3a309bd80a59895d05c3",
+          "checksum": {
+            "type": "MD5",
+            "value": "9f1f882bbeae3a309bd80a59895d05c3"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "directoryLabel": "source_editions",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+        "label": "20210515-quarter-ending-march-31-2021.pdf",
+        "restricted": false,
+        "directoryLabel": "source_editions",
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144744,
+          "persistentId": "",
+          "filename": "20210515-quarter-ending-march-31-2021.pdf",
+          "contentType": "application/pdf",
+          "friendlyType": "Adobe PDF",
+          "filesize": 803951,
+          "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a00980dc1b-f45e094c7bf0",
+          "rootDataFileId": -1,
+          "md5": "4864a1973537b60983c3df9655a67adf",
+          "checksum": {
+            "type": "MD5",
+            "value": "4864a1973537b60983c3df9655a67adf"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "directoryLabel": "source_editions",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+        "label": "20220527-quarter-ending-march-31-2022.pdf",
+        "restricted": false,
+        "directoryLabel": "source_editions",
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144755,
+          "persistentId": "",
+          "filename": "20220527-quarter-ending-march-31-2022.pdf",
+          "contentType": "application/pdf",
+          "friendlyType": "Adobe PDF",
+          "filesize": 816870,
+          "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a00980ad1e-6ccd3af48107",
+          "rootDataFileId": -1,
+          "md5": "563bc8600ceb05f0009aafcbda1a61f2",
+          "checksum": {
+            "type": "MD5",
+            "value": "563bc8600ceb05f0009aafcbda1a61f2"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "directoryLabel": "source_editions",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+        "label": "20221129-quarter-ending-september-30-2022.pdf",
+        "restricted": false,
+        "directoryLabel": "source_editions",
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144745,
+          "persistentId": "",
+          "filename": "20221129-quarter-ending-september-30-2022.pdf",
+          "contentType": "application/pdf",
+          "friendlyType": "Adobe PDF",
+          "filesize": 824482,
+          "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a00980eb45-c7b69f015c20",
+          "rootDataFileId": -1,
+          "md5": "f00a8866373b0faa352c6da1e9f60534",
+          "checksum": {
+            "type": "MD5",
+            "value": "f00a8866373b0faa352c6da1e9f60534"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "directoryLabel": "source_editions",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+        "label": "20250326-jury-mgmt-qe-202406-ada.pdf",
+        "restricted": false,
+        "directoryLabel": "source_editions",
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144734,
+          "persistentId": "",
+          "filename": "20250326-jury-mgmt-qe-202406-ada.pdf",
+          "contentType": "application/pdf",
+          "friendlyType": "Adobe PDF",
+          "filesize": 8261279,
+          "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a00980ed49-6d6336325d14",
+          "rootDataFileId": -1,
+          "md5": "5841725dd988a0d5f1762a4404f4adca",
+          "checksum": {
+            "type": "MD5",
+            "value": "5841725dd988a0d5f1762a4404f4adca"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "directoryLabel": "source_editions",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+        "label": "20250327-qe-202409-ada-.pdf",
+        "restricted": false,
+        "directoryLabel": "source_editions",
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144735,
+          "persistentId": "",
+          "filename": "20250327-qe-202409-ada-.pdf",
+          "contentType": "application/pdf",
+          "friendlyType": "Adobe PDF",
+          "filesize": 8694613,
+          "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a00980b033-e817fedbc8b3",
+          "rootDataFileId": -1,
+          "md5": "f58f3bf6608e44536cbd4b5abe9881fd",
+          "checksum": {
+            "type": "MD5",
+            "value": "f58f3bf6608e44536cbd4b5abe9881fd"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "directoryLabel": "source_editions",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+        "label": "20250328-jury-mgmt-qe-202412-ada.pdf",
+        "restricted": false,
+        "directoryLabel": "source_editions",
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144736,
+          "persistentId": "",
+          "filename": "20250328-jury-mgmt-qe-202412-ada.pdf",
+          "contentType": "application/pdf",
+          "friendlyType": "Adobe PDF",
+          "filesize": 4961206,
+          "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a00980e040-bb39991f111b",
+          "rootDataFileId": -1,
+          "md5": "c878a45ff1da42d07f7db2eb1c2bf209",
+          "checksum": {
+            "type": "MD5",
+            "value": "c878a45ff1da42d07f7db2eb1c2bf209"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "directoryLabel": "source_editions",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+        "label": "20250909-jury-mgmt-qe-202506-ada.pdf",
+        "restricted": false,
+        "directoryLabel": "source_editions",
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144754,
+          "persistentId": "",
+          "filename": "20250909-jury-mgmt-qe-202506-ada.pdf",
+          "contentType": "application/pdf",
+          "friendlyType": "Adobe PDF",
+          "filesize": 8574668,
+          "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a00980c4e8-593007723748",
+          "rootDataFileId": -1,
+          "md5": "c42a8b63b89d9dd690d892866fe74b05",
+          "checksum": {
+            "type": "MD5",
+            "value": "c42a8b63b89d9dd690d892866fe74b05"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "directoryLabel": "source_editions",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+        "label": "20250909-qe-202503-ada-.pdf",
+        "restricted": false,
+        "directoryLabel": "source_editions",
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144743,
+          "persistentId": "",
+          "filename": "20250909-qe-202503-ada-.pdf",
+          "contentType": "application/pdf",
+          "friendlyType": "Adobe PDF",
+          "filesize": 8735953,
+          "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a00980da0d-4347af59818f",
+          "rootDataFileId": -1,
+          "md5": "ef8a815b7f0134010fbb7057cb499a31",
+          "checksum": {
+            "type": "MD5",
+            "value": "ef8a815b7f0134010fbb7057cb499a31"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "directoryLabel": "source_editions",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+        "label": "20260319-qe-202512-ada-.pdf",
+        "restricted": false,
+        "directoryLabel": "source_editions",
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144749,
+          "persistentId": "",
+          "filename": "20260319-qe-202512-ada-.pdf",
+          "contentType": "application/pdf",
+          "friendlyType": "Adobe PDF",
+          "filesize": 8929798,
+          "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a00980bee6-a548d0b5644c",
+          "rootDataFileId": -1,
+          "md5": "16d206c6550269f6a786f3be71948d75",
+          "checksum": {
+            "type": "MD5",
+            "value": "16d206c6550269f6a786f3be71948d75"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "directoryLabel": "source_editions",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Calendar model output: six outcomes across seven samples, with coefficient, standard error, confidence interval, p, n, R-squared, and the joint F test of the three quarter terms. Reference quarter is July through September.",
+        "label": "appendix_A_main_models.tab",
+        "restricted": false,
+        "version": 3,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144897,
+          "persistentId": "",
+          "filename": "appendix_A_main_models.tab",
+          "contentType": "text/tab-separated-values",
+          "friendlyType": "Tab-Delimited",
+          "filesize": 27812,
+          "description": "Calendar model output: six outcomes across seven samples, with coefficient, standard error, confidence interval, p, n, R-squared, and the joint F test of the three quarter terms. Reference quarter is July through September.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a00aa2bf9d-d8c54cc984ce",
+          "originalFileFormat": "text/comma-separated-values",
+          "originalFormatLabel": "Comma Separated Values",
+          "originalFileSize": 27056,
+          "originalFileName": "appendix_A_main_models.csv",
+          "UNF": "UNF:6:HITByu/nm1qDFanDiHg9DA==",
+          "rootDataFileId": 14144766,
+          "previousDataFileId": 14144766,
+          "md5": "cc390d3240ddbbf120f5baa9d330f4c2",
+          "checksum": {
+            "type": "MD5",
+            "value": "cc390d3240ddbbf120f5baa9d330f4c2"
+          },
+          "tabularData": true,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Version 1 estimation output, retained for the record and superseded. Computed on a sample that treated the 380 no-trial quarters as observations. Because those quarters concentrate in the July through September reference quarter, the quarterly contrasts in this file are biased. Superseded by appendix_A_main_models.csv. Should not be cited as findings.",
+        "label": "appendix_A_rebuilt_SUPERSEDED_v1.csv",
+        "restricted": false,
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144659,
+          "persistentId": "",
+          "filename": "appendix_A_rebuilt_SUPERSEDED_v1.csv",
+          "contentType": "text/tab-separated-values",
+          "friendlyType": "Tab-Delimited",
+          "filesize": 25191,
+          "description": "Version 1 estimation output, retained for the record and superseded. Computed on a sample that treated the 380 no-trial quarters as observations. Because those quarters concentrate in the July through September reference quarter, the quarterly contrasts in this file are biased. Superseded by appendix_A_main_models.csv. Should not be cited as findings.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a008abb95d-b6e23298b74f",
+          "originalFileFormat": "text/comma-separated-values",
+          "originalFormatLabel": "Comma Separated Values",
+          "originalFileSize": 24435,
+          "originalFileName": "appendix_A_rebuilt.csv",
+          "UNF": "UNF:6:jTM/tdfkYjP/iXmr+1MHtw==",
+          "rootDataFileId": -1,
+          "md5": "74541ae7a1bca1a2c2948fd7ec885603",
+          "checksum": {
+            "type": "MD5",
+            "value": "74541ae7a1bca1a2c2948fd7ec885603"
+          },
+          "tabularData": true,
+          "creationDate": "2026-08-15",
+          "publicationDate": "2026-08-16",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Panel construction. Applies the first-publication vintage rule to the long-format extraction, excludes the December 2024 edition as a source for every quarter, and assembles the wide county-quarter analysis panel including the Data Status and QA Flags fields.",
+        "label": "build_master_from_editions.py",
+        "restricted": false,
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144660,
+          "persistentId": "",
+          "filename": "build_master_from_editions.py",
+          "contentType": "text/x-python",
+          "friendlyType": "Python Source Code",
+          "filesize": 3367,
+          "description": "Panel construction. Applies the first-publication vintage rule to the long-format extraction, excludes the December 2024 edition as a source for every quarter, and assembles the wide county-quarter analysis panel including the Data Status and QA Flags fields.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a008abb66c-5d2902b03cef",
+          "rootDataFileId": -1,
+          "md5": "ad5503b4a69bb0c463687e3b0e8d162e",
+          "checksum": {
+            "type": "MD5",
+            "value": "ad5503b4a69bb0c463687e3b0e8d162e"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-15",
+          "publicationDate": "2026-08-16",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Variable definitions for both data files: all 19 columns of the wide panel, including the QA Flags vocabulary and the four Data Status categories, and all 12 columns of the long-format extraction, including the source_note field.",
+        "label": "data_dictionary.md",
+        "restricted": false,
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144759,
+          "persistentId": "",
+          "filename": "data_dictionary.md",
+          "contentType": "text/markdown",
+          "friendlyType": "Markdown Text",
+          "filesize": 3926,
+          "description": "Variable definitions for both data files: all 19 columns of the wide panel, including the QA Flags vocabulary and the four Data Status categories, and all 12 columns of the long-format extraction, including the source_note field.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a009829443-a70cdc36a21a",
+          "rootDataFileId": -1,
+          "md5": "9c7f8005632e68dc1a7df7b48f12b4a4",
+          "checksum": {
+            "type": "MD5",
+            "value": "9c7f8005632e68dc1a7df7b48f12b4a4"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "PDF extractor. Reads the six quarterly index charts from each county page of an OSCA Jury Management Indices Report edition and writes a tidy long-format row per county, quarter, and index. Quarter labels and years are read off the page rather than assumed, since the four quarter columns rotate between editions. Handles the doubled-glyph text layer present in some editions.",
+        "label": "extract_jury_indices.py",
+        "restricted": false,
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144653,
+          "persistentId": "",
+          "filename": "extract_jury_indices.py",
+          "contentType": "text/x-python",
+          "friendlyType": "Python Source Code",
+          "filesize": 11519,
+          "description": "PDF extractor. Reads the six quarterly index charts from each county page of an OSCA Jury Management Indices Report edition and writes a tidy long-format row per county, quarter, and index. Quarter labels and years are read off the page rather than assumed, since the four quarter columns rotate between editions. Handles the doubled-glyph text layer present in some editions.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a008abaf3f-d1ac9d364aa5",
+          "rootDataFileId": -1,
+          "md5": "8244f8dd6ad256193a19b71e1cf4b7e8",
+          "checksum": {
+            "type": "MD5",
+            "value": "8244f8dd6ad256193a19b71e1cf4b7e8"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-15",
+          "publicationDate": "2026-08-16",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Wide county-quarter analysis panel. 4,422 records, 67 counties, 66 quarters from 2008 Q4 through 2025 Q4, 19 variables: the six indices, the six state medians OSCA prints beside them, county, year, quarter number, quarter label, source edition, QA Flags, and Data Status. Data Status governs the estimation sample: 4,039 reported, 380 reported_all_zero (OSCA publishes zero for all six indices; zero is a measurement only for Number of Trials, undefined for the four per-trial and per-panel indices because their denominators are trial counts, and best read as a non-report for Summoning Yield), 2 reported_partial_quarter (Baker and Hendry, 2012 Q3, computed by OSCA from two months), and 1 not_submitted (Okaloosa 2025 Q4, fields empty). QA Flags are populated on 97 records. See data_dictionary.md before use.",
+        "label": "Florida_Jury_Management_Indices_MASTER_corrected.tab",
+        "restricted": false,
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144728,
+          "persistentId": "",
+          "filename": "Florida_Jury_Management_Indices_MASTER_corrected.tab",
+          "contentType": "text/tab-separated-values",
+          "friendlyType": "Tab-Delimited",
+          "filesize": 609876,
+          "description": "Wide county-quarter analysis panel. 4,422 records, 67 counties, 66 quarters from 2008 Q4 through 2025 Q4, 19 variables: the six indices, the six state medians OSCA prints beside them, county, year, quarter number, quarter label, source edition, QA Flags, and Data Status. Data Status governs the estimation sample: 4,039 reported, 380 reported_all_zero (OSCA publishes zero for all six indices; zero is a measurement only for Number of Trials, undefined for the four per-trial and per-panel indices because their denominators are trial counts, and best read as a non-report for Summoning Yield), 2 reported_partial_quarter (Baker and Hendry, 2012 Q3, computed by OSCA from two months), and 1 not_submitted (Okaloosa 2025 Q4, fields empty). QA Flags are populated on 97 records. See data_dictionary.md before use.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a00968c7b5-14daf1b0dcd2",
+          "originalFileFormat": "text/comma-separated-values",
+          "originalFormatLabel": "Comma Separated Values",
+          "originalFileSize": 565656,
+          "originalFileName": "Florida_Jury_Management_Indices_MASTER_corrected.csv",
+          "UNF": "UNF:6:W/p5ZcHCIvgjjnFjmYhA1A==",
+          "rootDataFileId": 14144656,
+          "previousDataFileId": 14144656,
+          "md5": "c1eefb4555b4cf7192a676eb55046ea0",
+          "checksum": {
+            "type": "MD5",
+            "value": "c1eefb4555b4cf7192a676eb55046ea0"
+          },
+          "tabularData": true,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Internal identity test. Compares published average panel size against the product of people brought in per trial and percent to voir dire, using an envelope derived from each value's printed precision rather than a fixed tolerance, and reports the testable denominator, the failures, and whether each failure carries a QA flag.",
+        "label": "identity_interval.py",
+        "restricted": false,
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144768,
+          "persistentId": "",
+          "filename": "identity_interval.py",
+          "contentType": "text/x-python",
+          "friendlyType": "Python Source Code",
+          "filesize": 1560,
+          "description": "Internal identity test. Compares published average panel size against the product of people brought in per trial and percent to voir dire, using an envelope derived from each value's printed precision rather than a fixed tolerance, and reports the testable denominator, the failures, and whether each failure carries a QA flag.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a009829e70-a0c749e33727",
+          "rootDataFileId": -1,
+          "md5": "d22407b158626c0d06f70d32be0ee8a7",
+          "checksum": {
+            "type": "MD5",
+            "value": "d22407b158626c0d06f70d32be0ee8a7"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Long-format extraction, one row per county or circuit, quarter, index, and source edition. 46,956 rows across all twenty-four editions. This is the pre-vintage-rule source layer: it retains every published value from every edition, including the overlapping restatements that the vintage rule resolves and the Escambia placeholder pattern, so alternative sourcing rules can be applied and the source-integrity findings can be reproduced without re-extracting the PDFs. County names are normalized in this version; a source_note field marks the 48 rows OSCA flagged as computed from incomplete months.",
+        "label": "jury_indices_all_editions.tab",
+        "restricted": false,
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144729,
+          "persistentId": "",
+          "filename": "jury_indices_all_editions.tab",
+          "contentType": "text/tab-separated-values",
+          "friendlyType": "Tab-Delimited",
+          "filesize": 6991235,
+          "description": "Long-format extraction, one row per county or circuit, quarter, index, and source edition. 46,956 rows across all twenty-four editions. This is the pre-vintage-rule source layer: it retains every published value from every edition, including the overlapping restatements that the vintage rule resolves and the Escambia placeholder pattern, so alternative sourcing rules can be applied and the source-integrity findings can be reproduced without re-extracting the PDFs. County names are normalized in this version; a source_note field marks the 48 rows OSCA flagged as computed from incomplete months.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a0096a70dd-c9ba0ace8ed7",
+          "originalFileFormat": "text/comma-separated-values",
+          "originalFormatLabel": "Comma Separated Values",
+          "originalFileSize": 6052115,
+          "originalFileName": "jury_indices_all_editions.csv",
+          "UNF": "UNF:6:ek/C4JPK9CQVv0ZbkTYolA==",
+          "rootDataFileId": 14144655,
+          "previousDataFileId": 14144655,
+          "md5": "7f9843444bb771038ea9a64f0415ccd2",
+          "checksum": {
+            "type": "MD5",
+            "value": "7f9843444bb771038ea9a64f0415ccd2"
+          },
+          "tabularData": true,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+        "label": "JuryManagement1stQtr12-13.pdf",
+        "restricted": false,
+        "directoryLabel": "source_editions",
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144733,
+          "persistentId": "",
+          "filename": "JuryManagement1stQtr12-13.pdf",
+          "contentType": "application/pdf",
+          "friendlyType": "Adobe PDF",
+          "filesize": 1581965,
+          "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a00980ce74-78e1de9cdc01",
+          "rootDataFileId": -1,
+          "md5": "5c06580b29bce13ed3c772b25ddd95f8",
+          "checksum": {
+            "type": "MD5",
+            "value": "5c06580b29bce13ed3c772b25ddd95f8"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "directoryLabel": "source_editions",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+        "label": "JuryManagement2ndQtr09-10.pdf",
+        "restricted": false,
+        "directoryLabel": "source_editions",
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144741,
+          "persistentId": "",
+          "filename": "JuryManagement2ndQtr09-10.pdf",
+          "contentType": "application/pdf",
+          "friendlyType": "Adobe PDF",
+          "filesize": 1495630,
+          "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a00980b168-0c5a7a320b69",
+          "rootDataFileId": -1,
+          "md5": "1303ad90ae4d9462c42d2c6a74f25ac2",
+          "checksum": {
+            "type": "MD5",
+            "value": "1303ad90ae4d9462c42d2c6a74f25ac2"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "directoryLabel": "source_editions",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+        "label": "JuryManagement2ndQtr11-12.pdf",
+        "restricted": false,
+        "directoryLabel": "source_editions",
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144747,
+          "persistentId": "",
+          "filename": "JuryManagement2ndQtr11-12.pdf",
+          "contentType": "application/pdf",
+          "friendlyType": "Adobe PDF",
+          "filesize": 1588578,
+          "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a00980b6df-ba0c01938d34",
+          "rootDataFileId": -1,
+          "md5": "71f71ab536fcc35d4c794fca48b2f6ea",
+          "checksum": {
+            "type": "MD5",
+            "value": "71f71ab536fcc35d4c794fca48b2f6ea"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "directoryLabel": "source_editions",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+        "label": "JuryManagement3rdQtr10-11.pdf",
+        "restricted": false,
+        "directoryLabel": "source_editions",
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144740,
+          "persistentId": "",
+          "filename": "JuryManagement3rdQtr10-11.pdf",
+          "contentType": "application/pdf",
+          "friendlyType": "Adobe PDF",
+          "filesize": 1541864,
+          "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a00980b0cd-786244bf8f76",
+          "rootDataFileId": -1,
+          "md5": "7a60780aafa96e56c3f6d8e30ec6525e",
+          "checksum": {
+            "type": "MD5",
+            "value": "7a60780aafa96e56c3f6d8e30ec6525e"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "directoryLabel": "source_editions",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+        "label": "JuryManagement4thQtr12-13.pdf",
+        "restricted": false,
+        "directoryLabel": "source_editions",
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144742,
+          "persistentId": "",
+          "filename": "JuryManagement4thQtr12-13.pdf",
+          "contentType": "application/pdf",
+          "friendlyType": "Adobe PDF",
+          "filesize": 1403248,
+          "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a00980bb05-6f7bf0325df8",
+          "rootDataFileId": -1,
+          "md5": "75f0d95fc61bcbf4ea477fc89be53c8f",
+          "checksum": {
+            "type": "MD5",
+            "value": "75f0d95fc61bcbf4ea477fc89be53c8f"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "directoryLabel": "source_editions",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+        "label": "JuryManagement4thQuarter09-10.pdf",
+        "restricted": false,
+        "directoryLabel": "source_editions",
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144746,
+          "persistentId": "",
+          "filename": "JuryManagement4thQuarter09-10.pdf",
+          "contentType": "application/pdf",
+          "friendlyType": "Adobe PDF",
+          "filesize": 1302308,
+          "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a00980b1f4-7369fc1a931b",
+          "rootDataFileId": -1,
+          "md5": "b19596ce17aa24610e3c4c6df912e454",
+          "checksum": {
+            "type": "MD5",
+            "value": "b19596ce17aa24610e3c4c6df912e454"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "directoryLabel": "source_editions",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+        "label": "JuryManagementDashboard.pdf",
+        "restricted": false,
+        "directoryLabel": "source_editions",
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144748,
+          "persistentId": "",
+          "filename": "JuryManagementDashboard.pdf",
+          "contentType": "application/pdf",
+          "friendlyType": "Adobe PDF",
+          "filesize": 589186,
+          "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a00980adff-d19524e52818",
+          "rootDataFileId": -1,
+          "md5": "91e02d0e886ba9be4bf69d206b3babe1",
+          "checksum": {
+            "type": "MD5",
+            "value": "91e02d0e886ba9be4bf69d206b3babe1"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "directoryLabel": "source_editions",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+        "label": "JuryManagementQtrEnding6-30-14.pdf",
+        "restricted": false,
+        "directoryLabel": "source_editions",
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144751,
+          "persistentId": "",
+          "filename": "JuryManagementQtrEnding6-30-14.pdf",
+          "contentType": "application/pdf",
+          "friendlyType": "Adobe PDF",
+          "filesize": 721178,
+          "description": "Source edition. Florida Office of the State Courts Administrator quarterly Jury Management Indices Report, as retrieved under its agency-published filename. Official URL, quarter ending date, page count, and SHA-256 hash are in source_manifest.csv.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a00980c280-c27c4eca7f0c",
+          "rootDataFileId": -1,
+          "md5": "c2b2673f47d500bf41753893bcb38ac3",
+          "checksum": {
+            "type": "MD5",
+            "value": "c2b2673f47d500bf41753893bcb38ac3"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "directoryLabel": "source_editions",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "County phase classification derived from BLS QCEW private leisure and hospitality employment: peak month, trough month, amplitude as a share of the county's annual mean, and phase. Counties with amplitude below 0.06 are flat; otherwise winter_peak for a December through March peak, summer_peak for June through August, and other. Result: 21 winter_peak, 17 summer_peak, 21 flat, 8 other.",
+        "label": "phase_classes.tab",
+        "restricted": false,
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144767,
+          "persistentId": "",
+          "filename": "phase_classes.tab",
+          "contentType": "text/tab-separated-values",
+          "friendlyType": "Tab-Delimited",
+          "filesize": 3069,
+          "description": "County phase classification derived from BLS QCEW private leisure and hospitality employment: peak month, trough month, amplitude as a share of the county's annual mean, and phase. Counties with amplitude below 0.06 are flat; otherwise winter_peak for a December through March peak, summer_peak for June through August, and other. Result: 21 winter_peak, 17 summer_peak, 21 flat, 8 other.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a009829ca2-845ee2d82325",
+          "originalFileFormat": "text/comma-separated-values",
+          "originalFormatLabel": "Comma Separated Values",
+          "originalFileSize": 2801,
+          "originalFileName": "phase_classes.csv",
+          "UNF": "UNF:6:vZvzJ7f0YP/ooe9gyO/apQ==",
+          "rootDataFileId": -1,
+          "md5": "9f210c9dbf17d3dcaf8c7614378cb240",
+          "checksum": {
+            "type": "MD5",
+            "value": "9f210c9dbf17d3dcaf8c7614378cb240"
+          },
+          "tabularData": true,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Seasonal interaction models contrasting each phase group against all other counties, county and year-quarter fixed effects, clustered standard errors. This is the indirect specification; its comparison group pools flat, other, and the opposite phase. See phase_direct_contrast.csv for the direct winter-versus-summer test.",
+        "label": "phase_defined_models.tab",
+        "restricted": false,
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144760,
+          "persistentId": "",
+          "filename": "phase_defined_models.tab",
+          "contentType": "text/tab-separated-values",
+          "friendlyType": "Tab-Delimited",
+          "filesize": 8356,
+          "description": "Seasonal interaction models contrasting each phase group against all other counties, county and year-quarter fixed effects, clustered standard errors. This is the indirect specification; its comparison group pools flat, other, and the opposite phase. See phase_direct_contrast.csv for the direct winter-versus-summer test.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a009829a1a-5b2a16fc43c3",
+          "originalFileFormat": "text/comma-separated-values",
+          "originalFormatLabel": "Comma Separated Values",
+          "originalFileSize": 8140,
+          "originalFileName": "phase_defined_models.csv",
+          "UNF": "UNF:6:yDZ/Eu9Xk5Wf3KNjz6i2hg==",
+          "rootDataFileId": -1,
+          "md5": "601dafe3411d666b83d71185811a0cdd",
+          "checksum": {
+            "type": "MD5",
+            "value": "601dafe3411d666b83d71185811a0cdd"
+          },
+          "tabularData": true,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Code for the direct phase contrast: restricts the sample to winter-peaked and summer-peaked counties and interacts quarter with a winter-peaked indicator, so each coefficient is the difference between phase opposites in that quarter's contrast with July through September.",
+        "label": "phase_direct_contrast.py",
+        "restricted": false,
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144899,
+          "persistentId": "",
+          "filename": "phase_direct_contrast.py",
+          "contentType": "text/x-python",
+          "friendlyType": "Python Source Code",
+          "filesize": 1533,
+          "description": "Code for the direct phase contrast: restricts the sample to winter-peaked and summer-peaked counties and interacts quarter with a winter-peaked indicator, so each coefficient is the difference between phase opposites in that quarter's contrast with July through September.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a00aa66b62-2191def3be56",
+          "rootDataFileId": 14144762,
+          "previousDataFileId": 14144762,
+          "md5": "26bd44fc1924e1f4109b9f49dbf66a3a",
+          "checksum": {
+            "type": "MD5",
+            "value": "26bd44fc1924e1f4109b9f49dbf66a3a"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Direct contrast output: 21 winter-peaked against 17 summer-peaked counties, 38 counties and 2,264 reported county-quarters (1,924 for the three indices unpublished in the 2011 through 2013 editions), six outcomes, county and year-quarter fixed effects. No coefficient is distinguishable from zero; the smallest p-value is .146.",
+        "label": "phase_direct_contrast.tab",
+        "restricted": false,
+        "version": 3,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144902,
+          "persistentId": "",
+          "filename": "phase_direct_contrast.tab",
+          "contentType": "text/tab-separated-values",
+          "friendlyType": "Tab-Delimited",
+          "filesize": 2468,
+          "description": "Direct contrast output: 21 winter-peaked against 17 summer-peaked counties, 38 counties and 2,264 reported county-quarters (1,924 for the three indices unpublished in the 2011 through 2013 editions), six outcomes, county and year-quarter fixed effects. No coefficient is distinguishable from zero; the smallest p-value is .146.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a00aaf6a95-26224911183d",
+          "originalFileFormat": "text/comma-separated-values",
+          "originalFormatLabel": "Comma Separated Values",
+          "originalFileSize": 2396,
+          "originalFileName": "phase_direct_contrast.csv",
+          "UNF": "UNF:6:MniWAYb45kpMjCq4rxFD4Q==",
+          "rootDataFileId": 14144764,
+          "previousDataFileId": 14144764,
+          "md5": "a98b65e2b3dd9de2e7f9f693392cc0cd",
+          "checksum": {
+            "type": "MD5",
+            "value": "a98b65e2b3dd9de2e7f9f693392cc0cd"
+          },
+          "tabularData": true,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Documentation for the deposit. States what changed in Versions 2 and 2.1, the first-publication vintage rule and its two exceptions, the Data Status categories and what a zero means in each index, the known limits including absent quarters, partial-chart editions, the six internal-identity discrepancies present in the published source, the Escambia placeholder finding and the limits of the identity test, and OSCA's self-reporting caveat. Read before using the panel.",
+        "label": "README.md",
+        "restricted": false,
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144800,
+          "persistentId": "",
+          "filename": "README.md",
+          "contentType": "text/markdown",
+          "friendlyType": "Markdown Text",
+          "filesize": 9744,
+          "description": "Documentation for the deposit. States what changed in Versions 2 and 2.1, the first-publication vintage rule and its two exceptions, the Data Status categories and what a zero means in each index, the known limits including absent quarters, partial-chart editions, the six internal-identity discrepancies present in the published source, the Escambia placeholder finding and the limits of the identity test, and OSCA's self-reporting caveat. Read before using the panel.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a009b7e661-a60aca5ac8fc",
+          "rootDataFileId": 14144657,
+          "previousDataFileId": 14144730,
+          "md5": "9aa7f338966adfb0f5bbd3738e23241d",
+          "checksum": {
+            "type": "MD5",
+            "value": "9aa7f338966adfb0f5bbd3738e23241d"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Audit of the panel rebuild. Compares the rebuilt panel against the prior working panel cell by cell, documenting the column-alignment correction affecting twenty-four county-quarter records for the seven Third Circuit counties and Monroe in 2023 Q3, 2023 Q4, and 2024 Q1.",
+        "label": "rebuild_vs_session_comparison.tab",
+        "restricted": false,
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144658,
+          "persistentId": "",
+          "filename": "rebuild_vs_session_comparison.tab",
+          "contentType": "text/tab-separated-values",
+          "friendlyType": "Tab-Delimited",
+          "filesize": 9842,
+          "description": "Audit of the panel rebuild. Compares the rebuilt panel against the prior working panel cell by cell, documenting the column-alignment correction affecting twenty-four county-quarter records for the seven Third Circuit counties and Monroe in 2023 Q3, 2023 Q4, and 2024 Q1.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a008abb7de-e35680630a32",
+          "originalFileFormat": "text/comma-separated-values",
+          "originalFormatLabel": "Comma Separated Values",
+          "originalFileSize": 9086,
+          "originalFileName": "rebuild_vs_session_comparison.csv",
+          "UNF": "UNF:6:WuRzHEhz9NDAtpfhh0eLrw==",
+          "rootDataFileId": -1,
+          "md5": "2287966e07c1ee7d70fe93700afa8cf3",
+          "checksum": {
+            "type": "MD5",
+            "value": "2287966e07c1ee7d70fe93700afa8cf3"
+          },
+          "tabularData": true,
+          "creationDate": "2026-08-15",
+          "publicationDate": "2026-08-16",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Estimation code. Two-way fixed effects models (county and year) of six outcomes on calendar quarter with standard errors clustered on county, across seven samples; the QCEW phase classification of all 67 counties from monthly leisure and hospitality employment; and phase-defined seasonal interaction models. Restricts every estimation sample to records whose Data Status is reported.",
+        "label": "reestimate_all_local.py",
+        "restricted": false,
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144898,
+          "persistentId": "",
+          "filename": "reestimate_all_local.py",
+          "contentType": "text/x-python",
+          "friendlyType": "Python Source Code",
+          "filesize": 6557,
+          "description": "Estimation code. Two-way fixed effects models (county and year) of six outcomes on calendar quarter with standard errors clustered on county, across seven samples; the QCEW phase classification of all 67 counties from monthly leisure and hospitality employment; and phase-defined seasonal interaction models. Restricts every estimation sample to records whose Data Status is reported.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a00aa49d79-6568e59bed35",
+          "rootDataFileId": 14144765,
+          "previousDataFileId": 14144765,
+          "md5": "409465f505ec0f0cf06ce53106e2d31b",
+          "checksum": {
+            "type": "MD5",
+            "value": "409465f505ec0f0cf06ce53106e2d31b"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "SHA-256 checksums for the Version 2 files. Verify with: sha256sum -c SHA256SUMS. Checksums correspond to the original CSV, Python, Markdown, and PDF files as deposited. Dataverse ingests tabular files into an archival tab-delimited format and serves them as .tab, so verification requires downloading in original file format. The two files carrying a SUPERSEDED_v1 name are Version 1 output retained for the record and are deliberately not covered by this manifest.",
+        "label": "SHA256SUMS",
+        "restricted": false,
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144901,
+          "persistentId": "",
+          "filename": "SHA256SUMS",
+          "contentType": "application/octet-stream",
+          "friendlyType": "Unknown",
+          "filesize": 4406,
+          "description": "SHA-256 checksums for the Version 2 files. Verify with: sha256sum -c SHA256SUMS. Checksums correspond to the original CSV, Python, Markdown, and PDF files as deposited. Dataverse ingests tabular files into an archival tab-delimited format and serves them as .tab, so verification requires downloading in original file format. The two files carrying a SUPERSEDED_v1 name are Version 1 output retained for the record and are deliberately not covered by this manifest.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a00aabeedc-92df1142aefc",
+          "rootDataFileId": 14144654,
+          "previousDataFileId": 14144799,
+          "md5": "f366f4a08a75fa496a767d569bb2061c",
+          "checksum": {
+            "type": "MD5",
+            "value": "f366f4a08a75fa496a767d569bb2061c"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "The twenty-four source editions: filename, quarter ending date, page count, official flcourts.gov URL, SHA-256 hash of the deposited PDF, and Internet Archive capture URL and date where captured. Every edition has an official URL; three central to the stale-vintage finding carry third-party archive captures made August 16, 2026.",
+        "label": "source_manifest.tab",
+        "restricted": false,
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144761,
+          "persistentId": "",
+          "filename": "source_manifest.tab",
+          "contentType": "text/tab-separated-values",
+          "friendlyType": "Tab-Delimited",
+          "filesize": 5772,
+          "description": "The twenty-four source editions: filename, quarter ending date, page count, official flcourts.gov URL, SHA-256 hash of the deposited PDF, and Internet Archive capture URL and date where captured. Every edition has an official URL; three central to the stale-vintage finding carry third-party archive captures made August 16, 2026.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a0098290b8-eb8c4c37c17a",
+          "originalFileFormat": "text/comma-separated-values",
+          "originalFormatLabel": "Comma Separated Values",
+          "originalFileSize": 5605,
+          "originalFileName": "source_manifest.csv",
+          "UNF": "UNF:6:2WJIZlgmjaCvz9lFvlrC5Q==",
+          "rootDataFileId": -1,
+          "md5": "9690cb6d99b32c20e6929404886c7135",
+          "checksum": {
+            "type": "MD5",
+            "value": "9690cb6d99b32c20e6929404886c7135"
+          },
+          "tabularData": true,
+          "creationDate": "2026-08-16",
+          "publicationDate": "2026-08-16",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Version 1 seasonal interaction output, retained for the record and superseded. Computed on the same all-zero-inclusive sample and from a hand-drawn twenty-county classification that is not reproducible from any deposited file. Superseded by phase_defined_models.csv and phase_direct_contrast.csv, which use a classification derived by stated rule from federal payroll data. Should not be cited as findings.",
+        "label": "table4_rebuilt_SUPERSEDED_v1.json",
+        "restricted": false,
+        "version": 1,
+        "datasetVersionId": 745162,
+        "dataFile": {
+          "id": 14144652,
+          "persistentId": "",
+          "filename": "table4_rebuilt_SUPERSEDED_v1.json",
+          "contentType": "application/json",
+          "friendlyType": "JSON",
+          "filesize": 3289,
+          "description": "Version 1 seasonal interaction output, retained for the record and superseded. Computed on the same all-zero-inclusive sample and from a hand-drawn twenty-county classification that is not reproducible from any deposited file. Superseded by phase_defined_models.csv and phase_direct_contrast.csv, which use a classification derived by stated rule from federal payroll data. Should not be cited as findings.",
+          "storageIdentifier": "s3://dvn-cloud-iqss:1a008abc18d-ddd795d23674",
+          "rootDataFileId": -1,
+          "md5": "e0daf4e8b43bee223492a65ae3002a7e",
+          "checksum": {
+            "type": "MD5",
+            "value": "e0daf4e8b43bee223492a65ae3002a7e"
+          },
+          "tabularData": false,
+          "creationDate": "2026-08-15",
+          "publicationDate": "2026-08-16",
+          "lastUpdateTime": "2026-08-16T13:36:28Z",
+          "fileAccessRequest": true
+        }
+      }
+    ]
+  }
+}

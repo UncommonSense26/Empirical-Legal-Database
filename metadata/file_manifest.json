@@ -1,0 +1,467 @@
+{
+  "doi": "10.7910/DVN/1D6ZDU",
+  "files": [
+    {
+      "path": "source_editions/20150817-Quarter-Ending-December-31-2014.pdf",
+      "bytes": 860607,
+      "location": "data/source_editions/20150817-Quarter-Ending-December-31-2014.pdf",
+      "checksum": {
+        "type": "MD5",
+        "value": "1f8433e2c452b897c15c24d16f743822"
+      },
+      "dataverse_file_id": 14144756,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144756"
+    },
+    {
+      "path": "source_editions/20160722-Quarter-Ending-December-31-2015.pdf",
+      "bytes": 678178,
+      "location": "data/source_editions/20160722-Quarter-Ending-December-31-2015.pdf",
+      "checksum": {
+        "type": "MD5",
+        "value": "a5ce95192e14113d503d5d65414fd7ce"
+      },
+      "dataverse_file_id": 14144738,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144738"
+    },
+    {
+      "path": "source_editions/20170302-Quarter-Ending-December-31-2016.pdf",
+      "bytes": 665896,
+      "location": "data/source_editions/20170302-Quarter-Ending-December-31-2016.pdf",
+      "checksum": {
+        "type": "MD5",
+        "value": "d8945488dbc750bf354d722f315e3737"
+      },
+      "dataverse_file_id": 14144753,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144753"
+    },
+    {
+      "path": "source_editions/20180216-Quarter-Ending-December-31-2017.pdf",
+      "bytes": 713825,
+      "location": "data/source_editions/20180216-Quarter-Ending-December-31-2017.pdf",
+      "checksum": {
+        "type": "MD5",
+        "value": "97729a6d1cce066698f30e965baf8374"
+      },
+      "dataverse_file_id": 14144737,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144737"
+    },
+    {
+      "path": "source_editions/20190522-quarter-ending-dec-31-2018.pdf",
+      "bytes": 711143,
+      "location": "data/source_editions/20190522-quarter-ending-dec-31-2018.pdf",
+      "checksum": {
+        "type": "MD5",
+        "value": "6a59f8632ce0c18d55e2729fa25d0776"
+      },
+      "dataverse_file_id": 14144739,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144739"
+    },
+    {
+      "path": "source_editions/20200223-quarter-ending-december-31-2020.pdf",
+      "bytes": 807458,
+      "location": "data/source_editions/20200223-quarter-ending-december-31-2020.pdf",
+      "checksum": {
+        "type": "MD5",
+        "value": "be248c7391eabcfdb76111f22bd3177d"
+      },
+      "dataverse_file_id": 14144752,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144752"
+    },
+    {
+      "path": "source_editions/20200601_20200327_Quarter_Ending_December_31_2019.pdf",
+      "bytes": 671957,
+      "location": "data/source_editions/20200601_20200327_Quarter_Ending_December_31_2019.pdf",
+      "checksum": {
+        "type": "MD5",
+        "value": "9f1f882bbeae3a309bd80a59895d05c3"
+      },
+      "dataverse_file_id": 14144750,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144750"
+    },
+    {
+      "path": "source_editions/20210515-quarter-ending-march-31-2021.pdf",
+      "bytes": 803951,
+      "location": "data/source_editions/20210515-quarter-ending-march-31-2021.pdf",
+      "checksum": {
+        "type": "MD5",
+        "value": "4864a1973537b60983c3df9655a67adf"
+      },
+      "dataverse_file_id": 14144744,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144744"
+    },
+    {
+      "path": "source_editions/20220527-quarter-ending-march-31-2022.pdf",
+      "bytes": 816870,
+      "location": "data/source_editions/20220527-quarter-ending-march-31-2022.pdf",
+      "checksum": {
+        "type": "MD5",
+        "value": "563bc8600ceb05f0009aafcbda1a61f2"
+      },
+      "dataverse_file_id": 14144755,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144755"
+    },
+    {
+      "path": "source_editions/20221129-quarter-ending-september-30-2022.pdf",
+      "bytes": 824482,
+      "location": "data/source_editions/20221129-quarter-ending-september-30-2022.pdf",
+      "checksum": {
+        "type": "MD5",
+        "value": "f00a8866373b0faa352c6da1e9f60534"
+      },
+      "dataverse_file_id": 14144745,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144745"
+    },
+    {
+      "path": "source_editions/20250326-jury-mgmt-qe-202406-ada.pdf",
+      "bytes": 8261279,
+      "location": "data/source_editions/20250326-jury-mgmt-qe-202406-ada.pdf",
+      "checksum": {
+        "type": "MD5",
+        "value": "5841725dd988a0d5f1762a4404f4adca"
+      },
+      "dataverse_file_id": 14144734,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144734"
+    },
+    {
+      "path": "source_editions/20250327-qe-202409-ada-.pdf",
+      "bytes": 8694613,
+      "location": "data/source_editions/20250327-qe-202409-ada-.pdf",
+      "checksum": {
+        "type": "MD5",
+        "value": "f58f3bf6608e44536cbd4b5abe9881fd"
+      },
+      "dataverse_file_id": 14144735,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144735"
+    },
+    {
+      "path": "source_editions/20250328-jury-mgmt-qe-202412-ada.pdf",
+      "bytes": 4961206,
+      "location": "data/source_editions/20250328-jury-mgmt-qe-202412-ada.pdf",
+      "checksum": {
+        "type": "MD5",
+        "value": "c878a45ff1da42d07f7db2eb1c2bf209"
+      },
+      "dataverse_file_id": 14144736,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144736"
+    },
+    {
+      "path": "source_editions/20250909-jury-mgmt-qe-202506-ada.pdf",
+      "bytes": 8574668,
+      "location": "data/source_editions/20250909-jury-mgmt-qe-202506-ada.pdf",
+      "checksum": {
+        "type": "MD5",
+        "value": "c42a8b63b89d9dd690d892866fe74b05"
+      },
+      "dataverse_file_id": 14144754,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144754"
+    },
+    {
+      "path": "source_editions/20250909-qe-202503-ada-.pdf",
+      "bytes": 8735953,
+      "location": "data/source_editions/20250909-qe-202503-ada-.pdf",
+      "checksum": {
+        "type": "MD5",
+        "value": "ef8a815b7f0134010fbb7057cb499a31"
+      },
+      "dataverse_file_id": 14144743,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144743"
+    },
+    {
+      "path": "source_editions/20260319-qe-202512-ada-.pdf",
+      "bytes": 8929798,
+      "location": "data/source_editions/20260319-qe-202512-ada-.pdf",
+      "checksum": {
+        "type": "MD5",
+        "value": "16d206c6550269f6a786f3be71948d75"
+      },
+      "dataverse_file_id": 14144749,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144749"
+    },
+    {
+      "path": "appendix_A_main_models.csv",
+      "bytes": 27056,
+      "location": "data/appendix_A_main_models.csv",
+      "checksum": {
+        "type": "MD5",
+        "value": "cc390d3240ddbbf120f5baa9d330f4c2"
+      },
+      "dataverse_file_id": 14144897,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144897"
+    },
+    {
+      "path": "appendix_A_rebuilt.csv",
+      "bytes": 24435,
+      "location": "data/appendix_A_rebuilt.csv",
+      "checksum": {
+        "type": "MD5",
+        "value": "74541ae7a1bca1a2c2948fd7ec885603"
+      },
+      "dataverse_file_id": 14144659,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144659"
+    },
+    {
+      "path": "build_master_from_editions.py",
+      "bytes": 3367,
+      "location": "data/build_master_from_editions.py",
+      "checksum": {
+        "type": "MD5",
+        "value": "ad5503b4a69bb0c463687e3b0e8d162e"
+      },
+      "dataverse_file_id": 14144660,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144660"
+    },
+    {
+      "path": "data_dictionary.md",
+      "bytes": 3926,
+      "location": "data/data_dictionary.md",
+      "checksum": {
+        "type": "MD5",
+        "value": "9c7f8005632e68dc1a7df7b48f12b4a4"
+      },
+      "dataverse_file_id": 14144759,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144759"
+    },
+    {
+      "path": "extract_jury_indices.py",
+      "bytes": 11519,
+      "location": "data/extract_jury_indices.py",
+      "checksum": {
+        "type": "MD5",
+        "value": "8244f8dd6ad256193a19b71e1cf4b7e8"
+      },
+      "dataverse_file_id": 14144653,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144653"
+    },
+    {
+      "path": "Florida_Jury_Management_Indices_MASTER_corrected.csv",
+      "bytes": 565656,
+      "location": "data/Florida_Jury_Management_Indices_MASTER_corrected.csv",
+      "checksum": {
+        "type": "MD5",
+        "value": "c1eefb4555b4cf7192a676eb55046ea0"
+      },
+      "dataverse_file_id": 14144728,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144728"
+    },
+    {
+      "path": "identity_interval.py",
+      "bytes": 1560,
+      "location": "data/identity_interval.py",
+      "checksum": {
+        "type": "MD5",
+        "value": "d22407b158626c0d06f70d32be0ee8a7"
+      },
+      "dataverse_file_id": 14144768,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144768"
+    },
+    {
+      "path": "jury_indices_all_editions.csv",
+      "bytes": 6052115,
+      "location": "data/jury_indices_all_editions.csv",
+      "checksum": {
+        "type": "MD5",
+        "value": "7f9843444bb771038ea9a64f0415ccd2"
+      },
+      "dataverse_file_id": 14144729,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144729"
+    },
+    {
+      "path": "source_editions/JuryManagement1stQtr12-13.pdf",
+      "bytes": 1581965,
+      "location": "data/source_editions/JuryManagement1stQtr12-13.pdf",
+      "checksum": {
+        "type": "MD5",
+        "value": "5c06580b29bce13ed3c772b25ddd95f8"
+      },
+      "dataverse_file_id": 14144733,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144733"
+    },
+    {
+      "path": "source_editions/JuryManagement2ndQtr09-10.pdf",
+      "bytes": 1495630,
+      "location": "data/source_editions/JuryManagement2ndQtr09-10.pdf",
+      "checksum": {
+        "type": "MD5",
+        "value": "1303ad90ae4d9462c42d2c6a74f25ac2"
+      },
+      "dataverse_file_id": 14144741,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144741"
+    },
+    {
+      "path": "source_editions/JuryManagement2ndQtr11-12.pdf",
+      "bytes": 1588578,
+      "location": "data/source_editions/JuryManagement2ndQtr11-12.pdf",
+      "checksum": {
+        "type": "MD5",
+        "value": "71f71ab536fcc35d4c794fca48b2f6ea"
+      },
+      "dataverse_file_id": 14144747,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144747"
+    },
+    {
+      "path": "source_editions/JuryManagement3rdQtr10-11.pdf",
+      "bytes": 1541864,
+      "location": "data/source_editions/JuryManagement3rdQtr10-11.pdf",
+      "checksum": {
+        "type": "MD5",
+        "value": "7a60780aafa96e56c3f6d8e30ec6525e"
+      },
+      "dataverse_file_id": 14144740,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144740"
+    },
+    {
+      "path": "source_editions/JuryManagement4thQtr12-13.pdf",
+      "bytes": 1403248,
+      "location": "data/source_editions/JuryManagement4thQtr12-13.pdf",
+      "checksum": {
+        "type": "MD5",
+        "value": "75f0d95fc61bcbf4ea477fc89be53c8f"
+      },
+      "dataverse_file_id": 14144742,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144742"
+    },
+    {
+      "path": "source_editions/JuryManagement4thQuarter09-10.pdf",
+      "bytes": 1302308,
+      "location": "data/source_editions/JuryManagement4thQuarter09-10.pdf",
+      "checksum": {
+        "type": "MD5",
+        "value": "b19596ce17aa24610e3c4c6df912e454"
+      },
+      "dataverse_file_id": 14144746,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144746"
+    },
+    {
+      "path": "source_editions/JuryManagementDashboard.pdf",
+      "bytes": 589186,
+      "location": "data/source_editions/JuryManagementDashboard.pdf",
+      "checksum": {
+        "type": "MD5",
+        "value": "91e02d0e886ba9be4bf69d206b3babe1"
+      },
+      "dataverse_file_id": 14144748,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144748"
+    },
+    {
+      "path": "source_editions/JuryManagementQtrEnding6-30-14.pdf",
+      "bytes": 721178,
+      "location": "data/source_editions/JuryManagementQtrEnding6-30-14.pdf",
+      "checksum": {
+        "type": "MD5",
+        "value": "c2b2673f47d500bf41753893bcb38ac3"
+      },
+      "dataverse_file_id": 14144751,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144751"
+    },
+    {
+      "path": "phase_classes.csv",
+      "bytes": 2801,
+      "location": "data/phase_classes.csv",
+      "checksum": {
+        "type": "MD5",
+        "value": "9f210c9dbf17d3dcaf8c7614378cb240"
+      },
+      "dataverse_file_id": 14144767,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144767"
+    },
+    {
+      "path": "phase_defined_models.csv",
+      "bytes": 8140,
+      "location": "data/phase_defined_models.csv",
+      "checksum": {
+        "type": "MD5",
+        "value": "601dafe3411d666b83d71185811a0cdd"
+      },
+      "dataverse_file_id": 14144760,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144760"
+    },
+    {
+      "path": "phase_direct_contrast.py",
+      "bytes": 1533,
+      "location": "data/phase_direct_contrast.py",
+      "checksum": {
+        "type": "MD5",
+        "value": "26bd44fc1924e1f4109b9f49dbf66a3a"
+      },
+      "dataverse_file_id": 14144899,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144899"
+    },
+    {
+      "path": "phase_direct_contrast.csv",
+      "bytes": 2396,
+      "location": "data/phase_direct_contrast.csv",
+      "checksum": {
+        "type": "MD5",
+        "value": "a98b65e2b3dd9de2e7f9f693392cc0cd"
+      },
+      "dataverse_file_id": 14144902,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144902"
+    },
+    {
+      "path": "README.md",
+      "bytes": 9744,
+      "location": "data/README.md",
+      "checksum": {
+        "type": "MD5",
+        "value": "9aa7f338966adfb0f5bbd3738e23241d"
+      },
+      "dataverse_file_id": 14144800,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144800"
+    },
+    {
+      "path": "rebuild_vs_session_comparison.csv",
+      "bytes": 9086,
+      "location": "data/rebuild_vs_session_comparison.csv",
+      "checksum": {
+        "type": "MD5",
+        "value": "2287966e07c1ee7d70fe93700afa8cf3"
+      },
+      "dataverse_file_id": 14144658,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144658"
+    },
+    {
+      "path": "reestimate_all_local.py",
+      "bytes": 6557,
+      "location": "data/reestimate_all_local.py",
+      "checksum": {
+        "type": "MD5",
+        "value": "409465f505ec0f0cf06ce53106e2d31b"
+      },
+      "dataverse_file_id": 14144898,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144898"
+    },
+    {
+      "path": "SHA256SUMS",
+      "bytes": 4406,
+      "location": "data/SHA256SUMS",
+      "checksum": {
+        "type": "MD5",
+        "value": "f366f4a08a75fa496a767d569bb2061c"
+      },
+      "dataverse_file_id": 14144901,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144901"
+    },
+    {
+      "path": "source_manifest.csv",
+      "bytes": 5605,
+      "location": "data/source_manifest.csv",
+      "checksum": {
+        "type": "MD5",
+        "value": "9690cb6d99b32c20e6929404886c7135"
+      },
+      "dataverse_file_id": 14144761,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144761"
+    },
+    {
+      "path": "table4_rebuilt_SUPERSEDED_v1.json",
+      "bytes": 3289,
+      "location": "data/table4_rebuilt_SUPERSEDED_v1.json",
+      "checksum": {
+        "type": "MD5",
+        "value": "e0daf4e8b43bee223492a65ae3002a7e"
+      },
+      "dataverse_file_id": 14144652,
+      "dataverse_url": "https://dataverse.harvard.edu/file.xhtml?fileId=14144652"
+    }
+  ]
+}

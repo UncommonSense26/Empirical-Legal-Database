@@ -1,9 +1,10 @@
 cff-version: 1.2.0
 message: "If you use this dataset, please cite it using the metadata below."
 type: dataset
-title: "Empirical Legal Database"
+title: "Florida Jury Management Indices Panel, 2008 Q4 through 2025 Q4: Edition-Sourced County-Quarter Archive"
 authors:
-  - name: "Empirical Legal Database contributors"
+  - family-names: "Lamoureux"
+    given-names: "Justin"
 doi: 10.7910/DVN/1D6ZDU
 url: "https://github.com/UncommonSense26/Empirical-Legal-Database"
 repository: "https://github.com/UncommonSense26/Empirical-Legal-Database"
@@ -14,4 +15,19 @@ identifiers:
   - type: url
     value: "https://github.com/UncommonSense26/Empirical-Legal-Database"
     description: "Primary source: GitHub repository"
-abstract: "Empirical legal research dataset, originally published on Harvard Dataverse and now maintained on GitHub. This citation metadata is a placeholder until the import workflow replaces it with the full Dataverse record."
+version: "dataverse-4.0"
+date-released: 2026-08-16
+license: CC0-1.0
+keywords:
+  - "jury administration"
+  - "jury trials"
+  - "voir dire"
+  - "summoning yield"
+  - "six-person jury"
+  - "fair cross-section"
+  - "court administration"
+  - "judicial statistics"
+  - "Florida"
+  - "county-quarter panel"
+  - "administrative data"
+abstract: "A county-quarter panel of Florida jury management indices assembled from twenty-four published editions of the Florida Office of the State Courts Administrator quarterly Jury Management Indices Reports. The panel holds 4,422 county-quarter records covering all 67 counties and 66 recovered quarters, with six indices per record: Summoning Yield, Juror Days Per Trial, People Brought In Per Trial, Percent to Voir Dire, Average Panel Size, and Number of Trials. The deposit includes the source PDFs, the long-format extraction of every value published in every edition, the extraction and panel-construction code, the estimation code and output, and a data dictionary. Tabular files are served in Dataverse's archival tab-delimited format; the original CSV files are available through the original file format download option, and the checksums in SHA256SUMS correspond to those originals.\n\nEach county-quarter-index cell takes the value from the earliest edition that publishes it, a first-publication vintage rule, with two exceptions. First, the edition for the quarter ending December 2024 is excluded as a source for every quarter because it republishes the prior year's values under 2024 labels: 729 of 804 comparable cells in its third and fourth columns are identical to the prior year, state medians included, and its first two columns reconcile to neither clean 2024 edition. Calendar 2024 is therefore sourced from the June 2024, September 2024, and March 2025 editions. Second, where a first-published value fails the internal identity (average panel size equals people brought in per trial times percent to voir dire) outside the envelope permitted by published rounding, and a later edition publishes a different value for the same county-quarter, the later value governs. That exception changed six cells, all Escambia County Average Panel Size, where OSCA prints 25.9 as a placeholder in its most recent quarter column and replaces it when the true figure arrives.\n\nEvery record carries a Data Status field, and users should read it before computing any average or estimating any model. 4,039 records are reported. 380 are reported_all_zero, quarters in which OSCA publishes zero for all six indices. Zero is a measurement only for Number of Trials. For the four per-trial and per-panel indices it is undefined rather than measured, because their denominators are trial counts. For Summoning Yield it is neither: the index divides jurors available on day one by jurors summoned for the term, and neither quantity requires a trial, as 201 records in this panel show by reporting a positive Summoning Yield alongside zero trials. A zero Summoning Yield in an all-zero record is therefore best read as a non-report rather than a measured response rate of zero. These quarters are not evenly distributed across the calendar, so including them biases quarterly comparisons as well as means. Two records are reported_partial_quarter, Baker and Hendry counties for 2012 Q3, which OSCA computed from two months rather than three. One record is not_submitted, Okaloosa County for 2025 Q4, with all six index fields empty.\n\nKnown limits. Three quarters are absent from every recovered edition: 2022 Q4, 2023 Q1, and 2023 Q2. Three editions covering 2011 through 2013 publish only three of the six charts, so Juror Days Per Trial, People Brought In Per Trial, and Percent to Voir Dire are absent for 603 records in those years. The internal identity is testable in 3,818 records and fails outside the rounding envelope in six, each of which reproduces its printed source page exactly and each of which is QA-flagged. Twenty-four county-quarter records for the seven Third Circuit counties and Monroe, covering 2023 Q3, 2023 Q4, and 2024 Q1, were re-extracted from the June 2024 and September 2024 editions after a column-alignment error was found in a working panel. OSCA states that these figures are self reported by the clerk of court or the circuit court administrator and that OSCA does not confirm their accuracy, validity, or reliability; this deposit reproduces the published figures and does not audit them."
